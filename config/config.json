@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "isumizumi",
+    "password": "hacktiv8Super",
+    "database": "menu_login",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "isumizumi",
+    "password": "hacktiv8Super",
+    "database": "menu_login",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "isumizumi",
+    "password": "hacktiv8Super",
+    "database": "menu_login",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "name": "SessionsExample",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x"
+  }
+}
