@@ -1,0 +1,47 @@
+<% include ../partials/header %>
+  <div class="container">
+    <form class="form-horizontal" role="form" action="/create" method="post">
+      <h2>Registration Form</h2>
+      <div class="form-group">
+        <label for="userName" class="col-sm-3 control-label">Username</label>
+        <div class="col-sm-9">
+            <input type="text" id="userName" name="username" placeholder="Username" class="form-control" autofocus>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
+            <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-9">
+            <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3">Role</label>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="radio-inline">
+                  <input type="radio" name="role" value="admin">Admin
+              </label>
+            </div>
+            <div class="col-sm-6">
+              <label class="radio-inline">
+                  <input type="radio" name="role" value="customer">Customer
+              </label>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="form-group">
+          <div class="col-sm-9 col-sm-offset-3">
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </div>
+      </div>
+    </form>
+  </div>
+<% include ../partials/footer %>
