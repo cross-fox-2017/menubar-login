@@ -21,7 +21,7 @@ router.post('/register', function(req, res, next){
     password: pass,
     email: email
   }).then(function(newuser){
-    res.send(newuser)
+    res.redirect('/')
   })
 });
 
