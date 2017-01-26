@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+  <div class="container">
+    <div class="row">
+      <h2>Sign Up</h2>
+      <form action="/register" method="post">
+        <div class="form-group">
+          <label for="user">Username*:</label>
+          <input type="text" class="form-control" name="username" id="user" value="" placeholder="Username" required="required">
+        </div>
+        <div class="form-group">
+          <label for="pass">Password*:</label>
+          <input type="password" class="form-control" name="password" id="pass" value="" placeholder="Your password" required="required">
+        </div>
+        <div class="form-group">
+          <label for="em">Email*:</label>
+          <input type="email" class="form-control" name="email" id="em" value="" placeholder="Email address" required="required">
+        </div>
+        <div class="form-group">
+          <label for="rol">Identity*:</label>
+          <input type="text" class="form-control" name="role" id="rol" value="" placeholder="Your identity" required="required">
+        </div>
+        <hr>
+        <label>By clicking continue, I agree to the Hacktiv8 Terms and Privacy</label>
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-primary">Continue</button>
+      </form>
+      <hr>
+      <label>Already have an account?</label>
+      <a href="/">Sign in</a>
+    </div>
+  </div>
+<% include ../partials/footer %>

@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+  <div class="container">
+    <div class="row">
+      <div class="title">
+        <h1>Menu</h1>
+      </div>
+      <br>
+      <table class="table table-bordered">
+        <thead style="background-color: rgba(255, 230, 128, 0.8);">
+          <th>Username</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Role</th>
+        </thead>
+        <tbody>
+          <% for(let i = 0; i < users.length; i++){ %>
+          <tr>
+            <td><%= users[i].username %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].password %></td>
+            <td><%= users[i].role %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <label>This is not you?</label>
+      <br/>
+      <a href="/logout" class="btn btn-danger">Logout</a>
+      <br/>
+      <hr>
+    </div>
+  </div>
+<% include ../partials/footer %>
