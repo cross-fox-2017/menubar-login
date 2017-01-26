@@ -1,0 +1,31 @@
+<% include partials/header %>
+<h1>masuk halaman utama</h1>
+<h3>Anda adalah User <%= role %></h3>
+<% if (role == 'Admin'){ %>
+    <table class="table">
+      <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <% data.forEach(function(data){ %>
+        <tr>
+          <td><%= data.id %></td>
+          <td><%= data.username %></td>
+          <td><%= data.email %></td>
+          <td><%= data.role %></td>
+          <td>
+            <form action="users/update/<%= data.id %>" method="post">
+                <input type="submit" name="action" value="Update">
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+      </tbody>
+    </table>
+<% } %>
+<a href="/logout" type="button" class="btn btn-default navbar-btn">Logout</a>
+<% include partials/footer %>
