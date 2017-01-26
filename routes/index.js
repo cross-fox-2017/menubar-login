@@ -7,6 +7,7 @@ const models = require("../models")
 
 /* GET users listing. */
 router.post('/', function(req, res, next) {
+
     var user = req.body.user
     var password = req.body.password
     var roleid = req.body.roleid
@@ -32,6 +33,7 @@ router.post('/', function(req, res, next) {
 })
 
 router.get('/', function(req, res, next) {
+
     res.render('index');
 });
 router.get('/adminpanel', function(req, res, next) {
@@ -58,6 +60,7 @@ router.get('/register', function(req, res, next) {
 });
 
 router.get('/logout', function(req, res, next) {
+
     req.session.destroy()
     res.redirect('/');
 });
