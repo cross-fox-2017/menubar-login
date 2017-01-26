@@ -34,9 +34,8 @@ router.get('/register', function(req, res, next) {
     res.render('pages/register', { title: 'Register' });
 });
 
-router.get('/logout', function(req, res, next) {
-  req.session.isLogin = false;
-  req.session.nama = ""
+router.post('/logout', function(req, res, next) {
+  req.session.destroy()
   res.redirect('/')
 });
 
